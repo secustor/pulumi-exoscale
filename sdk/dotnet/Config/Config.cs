@@ -46,7 +46,7 @@ namespace Pulumi.Exoscale
         /// <summary>
         /// CloudStack ini configuration filename (by default: cloudstack.ini)
         /// </summary>
-        public static string? Config
+        public static string? CloudstackConfig
         {
             get => _config.Get();
             set => _config.Set(value);

@@ -6,7 +6,6 @@ using System.Collections.Generic;
 using System.Collections.Immutable;
 using System.Threading.Tasks;
 using Pulumi.Serialization;
-using Pulumi.Utilities;
 
 namespace Pulumi.Exoscale
 {
@@ -42,7 +41,7 @@ namespace Pulumi.Exoscale
         /// {{% /examples %}}
         /// </summary>
         public static Task<GetComputeResult> InvokeAsync(GetComputeArgs? args = null, InvokeOptions? options = null)
-            => Pulumi.Deployment.Instance.InvokeAsync<GetComputeResult>("exoscale:index/getCompute:getCompute", args ?? new GetComputeArgs(), options.WithVersion());
+            => Pulumi.Deployment.Instance.InvokeAsync<GetComputeResult>("exoscale:index/getCompute:getCompute", args ?? new GetComputeArgs(), options.WithDefaults());
 
         /// <summary>
         /// Provides information on an [Exoscale Compute instance][compute-doc].
@@ -74,7 +73,7 @@ namespace Pulumi.Exoscale
         /// {{% /examples %}}
         /// </summary>
         public static Output<GetComputeResult> Invoke(GetComputeInvokeArgs? args = null, InvokeOptions? options = null)
-            => Pulumi.Deployment.Instance.Invoke<GetComputeResult>("exoscale:index/getCompute:getCompute", args ?? new GetComputeInvokeArgs(), options.WithVersion());
+            => Pulumi.Deployment.Instance.Invoke<GetComputeResult>("exoscale:index/getCompute:getCompute", args ?? new GetComputeInvokeArgs(), options.WithDefaults());
     }
 
 

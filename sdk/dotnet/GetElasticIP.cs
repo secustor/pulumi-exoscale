@@ -6,7 +6,6 @@ using System.Collections.Generic;
 using System.Collections.Immutable;
 using System.Threading.Tasks;
 using Pulumi.Serialization;
-using Pulumi.Utilities;
 
 namespace Pulumi.Exoscale
 {
@@ -57,7 +56,7 @@ namespace Pulumi.Exoscale
         /// {{% /examples %}}
         /// </summary>
         public static Task<GetElasticIPResult> InvokeAsync(GetElasticIPArgs args, InvokeOptions? options = null)
-            => Pulumi.Deployment.Instance.InvokeAsync<GetElasticIPResult>("exoscale:index/getElasticIP:getElasticIP", args ?? new GetElasticIPArgs(), options.WithVersion());
+            => Pulumi.Deployment.Instance.InvokeAsync<GetElasticIPResult>("exoscale:index/getElasticIP:getElasticIP", args ?? new GetElasticIPArgs(), options.WithDefaults());
 
         /// <summary>
         /// Provides information on an [Elastic IP][eip-doc].
@@ -104,7 +103,7 @@ namespace Pulumi.Exoscale
         /// {{% /examples %}}
         /// </summary>
         public static Output<GetElasticIPResult> Invoke(GetElasticIPInvokeArgs args, InvokeOptions? options = null)
-            => Pulumi.Deployment.Instance.Invoke<GetElasticIPResult>("exoscale:index/getElasticIP:getElasticIP", args ?? new GetElasticIPInvokeArgs(), options.WithVersion());
+            => Pulumi.Deployment.Instance.Invoke<GetElasticIPResult>("exoscale:index/getElasticIP:getElasticIP", args ?? new GetElasticIPInvokeArgs(), options.WithDefaults());
     }
 
 
