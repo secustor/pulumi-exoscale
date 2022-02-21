@@ -6,7 +6,6 @@ using System.Collections.Generic;
 using System.Collections.Immutable;
 using System.Threading.Tasks;
 using Pulumi.Serialization;
-using Pulumi.Utilities;
 
 namespace Pulumi.Exoscale
 {
@@ -44,7 +43,7 @@ namespace Pulumi.Exoscale
         /// {{% /examples %}}
         /// </summary>
         public static Task<GetNLBResult> InvokeAsync(GetNLBArgs args, InvokeOptions? options = null)
-            => Pulumi.Deployment.Instance.InvokeAsync<GetNLBResult>("exoscale:index/getNLB:getNLB", args ?? new GetNLBArgs(), options.WithVersion());
+            => Pulumi.Deployment.Instance.InvokeAsync<GetNLBResult>("exoscale:index/getNLB:getNLB", args ?? new GetNLBArgs(), options.WithDefaults());
 
         /// <summary>
         /// Provides information on a [Network Load Balancer][nlb-doc] (NLB) instance for use in other resources such as a [`exoscale.NLBService`][r-nlb_service] resource.
@@ -78,7 +77,7 @@ namespace Pulumi.Exoscale
         /// {{% /examples %}}
         /// </summary>
         public static Output<GetNLBResult> Invoke(GetNLBInvokeArgs args, InvokeOptions? options = null)
-            => Pulumi.Deployment.Instance.Invoke<GetNLBResult>("exoscale:index/getNLB:getNLB", args ?? new GetNLBInvokeArgs(), options.WithVersion());
+            => Pulumi.Deployment.Instance.Invoke<GetNLBResult>("exoscale:index/getNLB:getNLB", args ?? new GetNLBInvokeArgs(), options.WithDefaults());
     }
 
 

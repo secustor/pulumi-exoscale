@@ -6,7 +6,6 @@ using System.Collections.Generic;
 using System.Collections.Immutable;
 using System.Threading.Tasks;
 using Pulumi.Serialization;
-using Pulumi.Utilities;
 
 namespace Pulumi.Exoscale
 {
@@ -41,7 +40,7 @@ namespace Pulumi.Exoscale
         /// {{% /examples %}}
         /// </summary>
         public static Task<GetComputeInstanceResult> InvokeAsync(GetComputeInstanceArgs args, InvokeOptions? options = null)
-            => Pulumi.Deployment.Instance.InvokeAsync<GetComputeInstanceResult>("exoscale:index/getComputeInstance:getComputeInstance", args ?? new GetComputeInstanceArgs(), options.WithVersion());
+            => Pulumi.Deployment.Instance.InvokeAsync<GetComputeInstanceResult>("exoscale:index/getComputeInstance:getComputeInstance", args ?? new GetComputeInstanceArgs(), options.WithDefaults());
 
         /// <summary>
         /// Provides information on an [Exoscale Compute instance][compute-doc].
@@ -72,7 +71,7 @@ namespace Pulumi.Exoscale
         /// {{% /examples %}}
         /// </summary>
         public static Output<GetComputeInstanceResult> Invoke(GetComputeInstanceInvokeArgs args, InvokeOptions? options = null)
-            => Pulumi.Deployment.Instance.Invoke<GetComputeInstanceResult>("exoscale:index/getComputeInstance:getComputeInstance", args ?? new GetComputeInstanceInvokeArgs(), options.WithVersion());
+            => Pulumi.Deployment.Instance.Invoke<GetComputeInstanceResult>("exoscale:index/getComputeInstance:getComputeInstance", args ?? new GetComputeInstanceInvokeArgs(), options.WithDefaults());
     }
 
 

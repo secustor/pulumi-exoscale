@@ -6,7 +6,6 @@ using System.Collections.Generic;
 using System.Collections.Immutable;
 using System.Threading.Tasks;
 using Pulumi.Serialization;
-using Pulumi.Utilities;
 
 namespace Pulumi.Exoscale
 {
@@ -44,7 +43,7 @@ namespace Pulumi.Exoscale
         /// {{% /examples %}}
         /// </summary>
         public static Task<GetComputeIPAddressResult> InvokeAsync(GetComputeIPAddressArgs args, InvokeOptions? options = null)
-            => Pulumi.Deployment.Instance.InvokeAsync<GetComputeIPAddressResult>("exoscale:index/getComputeIPAddress:getComputeIPAddress", args ?? new GetComputeIPAddressArgs(), options.WithVersion());
+            => Pulumi.Deployment.Instance.InvokeAsync<GetComputeIPAddressResult>("exoscale:index/getComputeIPAddress:getComputeIPAddress", args ?? new GetComputeIPAddressArgs(), options.WithDefaults());
 
         /// <summary>
         /// Provides information on a Compute [Elastic IP address][eip-doc].
@@ -78,7 +77,7 @@ namespace Pulumi.Exoscale
         /// {{% /examples %}}
         /// </summary>
         public static Output<GetComputeIPAddressResult> Invoke(GetComputeIPAddressInvokeArgs args, InvokeOptions? options = null)
-            => Pulumi.Deployment.Instance.Invoke<GetComputeIPAddressResult>("exoscale:index/getComputeIPAddress:getComputeIPAddress", args ?? new GetComputeIPAddressInvokeArgs(), options.WithVersion());
+            => Pulumi.Deployment.Instance.Invoke<GetComputeIPAddressResult>("exoscale:index/getComputeIPAddress:getComputeIPAddress", args ?? new GetComputeIPAddressInvokeArgs(), options.WithDefaults());
     }
 
 

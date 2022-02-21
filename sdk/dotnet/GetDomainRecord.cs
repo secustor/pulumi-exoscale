@@ -6,7 +6,6 @@ using System.Collections.Generic;
 using System.Collections.Immutable;
 using System.Threading.Tasks;
 using Pulumi.Serialization;
-using Pulumi.Utilities;
 
 namespace Pulumi.Exoscale
 {
@@ -65,7 +64,7 @@ namespace Pulumi.Exoscale
         /// {{% /examples %}}
         /// </summary>
         public static Task<GetDomainRecordResult> InvokeAsync(GetDomainRecordArgs args, InvokeOptions? options = null)
-            => Pulumi.Deployment.Instance.InvokeAsync<GetDomainRecordResult>("exoscale:index/getDomainRecord:getDomainRecord", args ?? new GetDomainRecordArgs(), options.WithVersion());
+            => Pulumi.Deployment.Instance.InvokeAsync<GetDomainRecordResult>("exoscale:index/getDomainRecord:getDomainRecord", args ?? new GetDomainRecordArgs(), options.WithDefaults());
 
         /// <summary>
         /// Provides information on [domain records][r-domain_record] hosted on [Exoscale DNS][exo-dns].
@@ -120,7 +119,7 @@ namespace Pulumi.Exoscale
         /// {{% /examples %}}
         /// </summary>
         public static Output<GetDomainRecordResult> Invoke(GetDomainRecordInvokeArgs args, InvokeOptions? options = null)
-            => Pulumi.Deployment.Instance.Invoke<GetDomainRecordResult>("exoscale:index/getDomainRecord:getDomainRecord", args ?? new GetDomainRecordInvokeArgs(), options.WithVersion());
+            => Pulumi.Deployment.Instance.Invoke<GetDomainRecordResult>("exoscale:index/getDomainRecord:getDomainRecord", args ?? new GetDomainRecordInvokeArgs(), options.WithDefaults());
     }
 
 

@@ -101,7 +101,7 @@ namespace Pulumi.Exoscale
         /// CloudStack ini configuration filename (by default: cloudstack.ini)
         /// </summary>
         [Input("config")]
-        public Input<string>? Config { get; set; }
+        public Input<string>? CloudstackConfig { get; set; }
 
         [Input("delay", json: true)]
         public Input<int>? Delay { get; set; }

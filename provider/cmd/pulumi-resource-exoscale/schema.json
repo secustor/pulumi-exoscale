@@ -23,7 +23,12 @@
             },
             "config": {
                 "type": "string",
-                "description": "CloudStack ini configuration filename (by default: cloudstack.ini)\n"
+                "description": "CloudStack ini configuration filename (by default: cloudstack.ini)\n",
+                "language": {
+                    "csharp": {
+                        "name": "CloudstackConfig"
+                    }
+                }
             },
             "delay": {
                 "type": "integer",
@@ -1026,7 +1031,12 @@
             },
             "config": {
                 "type": "string",
-                "description": "CloudStack ini configuration filename (by default: cloudstack.ini)\n"
+                "description": "CloudStack ini configuration filename (by default: cloudstack.ini)\n",
+                "language": {
+                    "csharp": {
+                        "name": "CloudstackConfig"
+                    }
+                }
             },
             "delay": {
                 "type": "integer",
@@ -1079,7 +1089,12 @@
             },
             "config": {
                 "type": "string",
-                "description": "CloudStack ini configuration filename (by default: cloudstack.ini)\n"
+                "description": "CloudStack ini configuration filename (by default: cloudstack.ini)\n",
+                "language": {
+                    "csharp": {
+                        "name": "CloudstackConfig"
+                    }
+                }
             },
             "delay": {
                 "type": "integer",

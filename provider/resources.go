@@ -68,12 +68,16 @@ func Provider() tfbridge.ProviderInfo {
 		// category/cloud tag helps with categorizing the package in the Pulumi Registry.
 		// For all available categories, see `Keywords` in
 		// https://www.pulumi.com/docs/guides/pulumi-packages/schema/#package.
-		Keywords:             []string{"pulumi", "exoscale", "category/cloud"},
-		License:              "Apache-2.0",
-		Homepage:             "https://www.pulumi.com",
-		Repository:           "https://github.com/secustor/pulumi-exoscale",
-		GitHubOrg:            mainPkg,
-		Config:               map[string]*tfbridge.SchemaInfo{},
+		Keywords:   []string{"pulumi", "exoscale", "category/cloud"},
+		License:    "Apache-2.0",
+		Homepage:   "https://www.pulumi.com",
+		Repository: "https://github.com/secustor/pulumi-exoscale",
+		GitHubOrg:  mainPkg,
+		Config: map[string]*tfbridge.SchemaInfo{
+			"config": {
+				CSharpName: "CloudstackConfig",
+			},
+		},
 		PreConfigureCallback: preConfigureCallback,
 		Resources: map[string]*tfbridge.ResourceInfo{
 			// Map each resource in the Terraform provider to a Pulumi type. Two examples

@@ -6,7 +6,6 @@ using System.Collections.Generic;
 using System.Collections.Immutable;
 using System.Threading.Tasks;
 using Pulumi.Serialization;
-using Pulumi.Utilities;
 
 namespace Pulumi.Exoscale
 {
@@ -58,7 +57,7 @@ namespace Pulumi.Exoscale
         /// {{% /examples %}}
         /// </summary>
         public static Task<GetAffinityResult> InvokeAsync(GetAffinityArgs? args = null, InvokeOptions? options = null)
-            => Pulumi.Deployment.Instance.InvokeAsync<GetAffinityResult>("exoscale:index/getAffinity:getAffinity", args ?? new GetAffinityArgs(), options.WithVersion());
+            => Pulumi.Deployment.Instance.InvokeAsync<GetAffinityResult>("exoscale:index/getAffinity:getAffinity", args ?? new GetAffinityArgs(), options.WithDefaults());
 
         /// <summary>
         /// Provides information on an [Anti-Affinity Group][aag-doc] for use in other resources such as a [`exoscale.Compute`][r-compute] resource.
@@ -106,7 +105,7 @@ namespace Pulumi.Exoscale
         /// {{% /examples %}}
         /// </summary>
         public static Output<GetAffinityResult> Invoke(GetAffinityInvokeArgs? args = null, InvokeOptions? options = null)
-            => Pulumi.Deployment.Instance.Invoke<GetAffinityResult>("exoscale:index/getAffinity:getAffinity", args ?? new GetAffinityInvokeArgs(), options.WithVersion());
+            => Pulumi.Deployment.Instance.Invoke<GetAffinityResult>("exoscale:index/getAffinity:getAffinity", args ?? new GetAffinityInvokeArgs(), options.WithDefaults());
     }
 
 

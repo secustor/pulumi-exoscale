@@ -6,7 +6,6 @@ using System.Collections.Generic;
 using System.Collections.Immutable;
 using System.Threading.Tasks;
 using Pulumi.Serialization;
-using Pulumi.Utilities;
 
 namespace Pulumi.Exoscale
 {
@@ -49,7 +48,7 @@ namespace Pulumi.Exoscale
         /// {{% /examples %}}
         /// </summary>
         public static Task<GetComputeTemplateResult> InvokeAsync(GetComputeTemplateArgs args, InvokeOptions? options = null)
-            => Pulumi.Deployment.Instance.InvokeAsync<GetComputeTemplateResult>("exoscale:index/getComputeTemplate:getComputeTemplate", args ?? new GetComputeTemplateArgs(), options.WithVersion());
+            => Pulumi.Deployment.Instance.InvokeAsync<GetComputeTemplateResult>("exoscale:index/getComputeTemplate:getComputeTemplate", args ?? new GetComputeTemplateArgs(), options.WithDefaults());
 
         /// <summary>
         /// Provides information on a Compute [template][templates] for use in other resources such as a [`exoscale.Compute`][r-compute] resource.
@@ -88,7 +87,7 @@ namespace Pulumi.Exoscale
         /// {{% /examples %}}
         /// </summary>
         public static Output<GetComputeTemplateResult> Invoke(GetComputeTemplateInvokeArgs args, InvokeOptions? options = null)
-            => Pulumi.Deployment.Instance.Invoke<GetComputeTemplateResult>("exoscale:index/getComputeTemplate:getComputeTemplate", args ?? new GetComputeTemplateInvokeArgs(), options.WithVersion());
+            => Pulumi.Deployment.Instance.Invoke<GetComputeTemplateResult>("exoscale:index/getComputeTemplate:getComputeTemplate", args ?? new GetComputeTemplateInvokeArgs(), options.WithDefaults());
     }
 
 
