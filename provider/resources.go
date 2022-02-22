@@ -77,6 +77,9 @@ func Provider() tfbridge.ProviderInfo {
 			"config": {
 				CSharpName: "CloudstackConfig",
 			},
+			"timeout": {
+				Type: "string",
+			},
 		},
 		PreConfigureCallback: preConfigureCallback,
 		Resources: map[string]*tfbridge.ResourceInfo{
